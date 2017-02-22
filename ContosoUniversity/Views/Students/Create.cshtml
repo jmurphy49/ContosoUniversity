@@ -14,7 +14,7 @@
         <div class="form-group">
             <label asp-for="EnrollmentDate" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="EnrollmentDate" class="form-control" />
+                <input asp-for="EnrollmentDate" class="form-control" placeholder="mm/dd/yyyy" />
                 <span asp-validation-for="EnrollmentDate" class="text-danger" />
             </div>
         </div>
@@ -28,7 +28,7 @@
         <div class="form-group">
             <label asp-for="LastName" class="col-md-2 control-label"></label>
             <div class="col-md-10">
-                <input asp-for="LastName" class="form-control" />
+                <input asp-for="LastName" class="form-control" id="inputError" />
                 <span asp-validation-for="LastName" class="text-danger" />
             </div>
         </div>

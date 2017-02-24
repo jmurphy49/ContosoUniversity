@@ -14,6 +14,7 @@ namespace ContosoUniversity.Models
         [Display(Name="First Name")]
         public string FirstName { get; set; }
         [Display(Name="Enrollment Date")]
+        [DataType(DataType.Date)]
         public DateTime EnrollmentDate { get; set; }
         [Display(Name = "Student's Courses")]
         public ICollection<Enrollment> Enrollments { get; set; }

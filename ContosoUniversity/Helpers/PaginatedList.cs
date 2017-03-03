@@ -19,27 +19,25 @@ namespace ContosoUniversity.Helpers
 
         }
 
-        private bool hasPreviousPage;
+        private bool  hasPreviousPage;
 
-        public bool HasPreviousPage
+        public bool  HasPreviousPage
         {
             get { return PageIndex > 1; }
-        
+           
         }
-        public bool hasNextPage;
+        private bool hasNextPage;
 
         public bool HasNextPage
         {
             get { return PageIndex < TotalPages; }
-
         }
-        public static async Task<PaginatedList<T>> CreateAsync (IQueryable<T> source, int pageIndex, int pageSize)
+
+    public static async Task<PaginatedList<T>> CreateAsync (IQueryable<T> source, int pageIndex, int pageSize)
         {
             var count = await source.CountAsync();
             var items = await source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToListAsync();
             return new PaginatedList<T>(items, count, pageIndex, pageSize);
         }
-
-
     }
 }

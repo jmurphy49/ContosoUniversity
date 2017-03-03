@@ -8,16 +8,15 @@ using ContosoUniversity.Data;
 using ContosoUniversity.Models;
 
 
-
 namespace ContosoUniversity.Controllers
 {
     public class HomeController : Controller
     {
         private readonly SchoolContext _context;
+
         public HomeController(SchoolContext context)
         {
             _context = context;
-
         }
 
         public IActionResult Index()
@@ -25,16 +24,16 @@ namespace ContosoUniversity.Controllers
             return View();
         }
 
-        public  async Task<IActionResult> About()
+        public async Task<ActionResult> About()
         {
             IQueryable<EnrollmentDataGroup> data = from student in _context.Students
-                                                   group student by student.EnrollmentDate into dateGroup
+                                                   group student by student.EnrollmentDate into dataGroup
                                                    select new EnrollmentDataGroup()
                                                    {
-                                                       EnrollmentDate = dateGroup.Key,
-                                                       StudentCount = dateGroup.Count()
-
+                                                       EnrollmentDate = dataGroup.Key,
+                                                       StudentCount = dataGroup.Count()
                                                    };
+
 
             return View(await data.AsNoTracking().ToListAsync());
         }

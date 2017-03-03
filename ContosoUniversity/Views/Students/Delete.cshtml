@@ -12,11 +12,12 @@
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.EnrollmentDate)
+            @Html.DisplayNameFor(model => model.LastName)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.EnrollmentDate)
+            @Html.DisplayFor(model => model.LastName)
         </dd>
+
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -24,23 +25,17 @@
             @Html.DisplayFor(model => model.FirstName)
         </dd>
         <dt>
-            @Html.DisplayNameFor(model => model.LastName)
+            @Html.DisplayNameFor(model => model.EnrollmentDate)
         </dt>
         <dd>
-            @Html.DisplayFor(model => model.LastName)
+            @Html.DisplayFor(model => model.EnrollmentDate)
         </dd>
     </dl>
-    <div class="btn-group-vertical">
-        <form asp-action="Delete">
-            <div class="form-actions no-color">
-                <input type="submit" value="Delete" class="btn btn-group-justified" />
-
-            </div>
-        </form>
-        <form asp-action="Index">
-            <div class="form-actions no-color">
-                <input type="submit" value="Return to list" class="btn btn-group-justified" />
-            </div>
-        </form>
-    </div>
+    
+    <form asp-action="Delete">
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </form>
 </div>

@@ -1,16 +1,18 @@
 ﻿@model IEnumerable<ContosoUniversity.Models.EnrollmentDataGroup>
+
 @{
-    ViewData["Title"] = "Student Body Statistics";
+    ViewData["Title"] = "About";
 }
 <h2>@ViewData["Title"].</h2>
+
 <table>
     <tr>
         <th>
-            Enrollment Date |
+            Enrollment Date
         </th>
         <th>
             Students
-        </th>       
+        </th>
     </tr>
     @foreach (var item in Model)
     {
@@ -25,3 +27,6 @@
 
     }
 </table>
+<h3>@ViewData["Message"]</h3>
+
+<p>Use this area to provide additional information.</p>

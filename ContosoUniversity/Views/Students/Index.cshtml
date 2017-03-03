@@ -55,11 +55,13 @@
         }
     </tbody>
 </table>
-<p>
-    <a asp-action="Create">Create New</a>
-    |
-    <a asp-action="Index">Back to List</a>
-</p>
+<center>
+    <p>
+        <a asp-action="Create">Create New</a>
+        |
+        <a asp-action="Index">Back to List</a>
+    </p>
+</center>
 
 @{
     var prevDisabled = !Model.HasPreviousPage ? "disabled" : "";

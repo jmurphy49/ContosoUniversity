@@ -10,8 +10,10 @@ using ContosoUniversity.Models;
 
 namespace ContosoUniversity.Controllers
 {
+    
     public class DepartmentsController : Controller
     {
+
         private readonly SchoolContext _context;
 
         public DepartmentsController(SchoolContext context)

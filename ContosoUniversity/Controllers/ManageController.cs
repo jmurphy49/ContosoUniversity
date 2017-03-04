@@ -13,8 +13,10 @@ using ContosoUniversity.Services;
 namespace ContosoUniversity.Controllers
 {
     [Authorize]
+    
     public class ManageController : Controller
     {
+        
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly IEmailSender _emailSender;

@@ -48,3 +48,17 @@ textarea {
     display: none
   }
 }
+.jumbotron {
+  background-image: url(/images/Tree.jpg);
+  max-width:100%;
+  background-size:100%;
+  background-repeat: repeat-x;
+  background-color: white;
+}
+.jumbotron h1,
+.jumbotron .h1{
+    text-shadow: 7px 7px #353638;
+    color: white;
+    font-family: 'Copperplate Gothic';
+    font-weight: lighter;
+}

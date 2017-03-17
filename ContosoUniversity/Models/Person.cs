@@ -22,7 +22,7 @@ namespace ContosoUniversity.Models
         {
             get
             {
-                return LastName + ", " + FirstName;
+                return LastName + ", " + FirstName + " ";
             }
         }
     }

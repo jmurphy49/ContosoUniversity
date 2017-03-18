@@ -49,11 +49,17 @@ textarea {
   }
 }
 .jumbotron {
-  background-image: url(/images/Tree.jpg);
+
   max-width:100%;
   background-size:100%;
   background-repeat: repeat-x;
-  background-color: white;
+  /*background-color: white;*/
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))),url(/images/Tree.jpg); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* IE10+ */
+  background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* W3C */ 
 }
 .jumbotron h1,
 .jumbotron .h1{
@@ -62,4 +68,3 @@ textarea {
     font-family: 'Copperplate Gothic';
     font-weight: lighter;
 }
-  

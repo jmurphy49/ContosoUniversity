@@ -7,10 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using ContosoUniversity.Data;
 using ContosoUniversity.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace ContosoUniversity.Controllers
 {
-    
+    [Authorize]
     public class StudentsController : Controller
     {
         private readonly SchoolContext _context;
@@ -86,13 +87,13 @@ namespace ContosoUniversity.Controllers
 
             return View(student);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Students/Create
         public IActionResult Create()
         {
             return View();
         }
-
+        [Authorize(Roles = "Administrator")]
         // POST: Students/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598
@@ -117,7 +118,7 @@ namespace ContosoUniversity.Controllers
 
             return View(student);
         }
-
+        [Authorize(Roles = "Administrator")]
         // GET: Students/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -134,7 +135,7 @@ namespace ContosoUniversity.Controllers
             }
             return View(student);
         }
-
+        [Authorize(Roles = "Administrator")]
         // POST: Students/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.

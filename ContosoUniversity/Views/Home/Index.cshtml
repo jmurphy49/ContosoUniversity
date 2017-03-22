@@ -1,38 +1,80 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
+<style>
+    .jumbotron {
 
+  max-width:100%;
+  background-size:100%;
+  background-repeat: repeat-x;
+  /*background-color: white;*/
+  background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 75%, rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(75%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,1))),url(/images/Tree.jpg); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* IE10+ */
+  background: linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 1%,rgba(255,255,255,1) 100%),url(/images/Tree.jpg); /* W3C */ 
+}
+</style>
 <div class="jumbotron">
-    <h1>
-        Contoso University ♦ ♦ ♦
-    </h1>
-
+        <h1>
+          Contoso University
+        </h1>
 </div>
+<div class="page-header"></div>
 <div class="row">
-    <div class="col-md-4">
-        <h2>
-            Welcome to Contoso University
-        </h2>
-        <p>
-            This is a simple application.
-        </p>
-    </div>
-    <div class="btn-group-vertical">
-        <a class="btn btn-success" href="https://docs.asp.net/en/latest/data/ef-mvc/intro.html" target="_blank">The tutorial can be found here.</a>
-        <a class="btn btn-success" href="https://gitbub.com/aspnet/docs/tree/master/aspnet/data/ef-mvc/intro/samples/cu-final" target="_blank">
-            Download the final project here.
-        </a>        
-    </div>
-    <div class="col-md-4">
-
-        <a class="btn btn-success" href="https://docs.asp.net/en/latest/data/ef-mvc/intro.html" target="_blank">The tutorial can be found here.</a>
-
-    </div>
-    <div class="col-md-4">
-        
-            <a class="btn btn-success" href="https://gitbub.com/aspnet/docs/tree/master/aspnet/data/ef-mvc/intro/samples/cu-final" target="_blank">
-                Download the final project here.
+    <div class="row text-center">
+        <div class="well col-sm-4">
+            <a asp-controller="Students" asp-action="Index" class="text-success">
+                <img src="~/images/User.png" />
+                <h4>
+                    <b>
+                        Students
+                    </b>
+                </h4>
             </a>
-        
+        </div>
+            <div class="well col-sm-4">
+                <a asp-controller="Courses" asp-action="Index" class="text-success">
+                    <img src="~/images/Education.png" />
+                    <h4>
+                        <b>
+                            Courses
+                        </b>
+                    </h4>
+                </a>
+            </div>
+                <div class="well col-sm-4">
+                    <a asp-controller="Instructors" asp-action="Index" class="text-success">
+                        <img src="~/images/Contact.png" />
+                        <h4>
+                            <b>
+                                Instructors
+                            </b>
+                        </h4>
+                    </a>
+                </div>
+            </div>
     </div>
-</div>
+
+
+
+
+        @*<div class="btn-group-vertical">
+                <a class="btn btn-success" href="https://docs.asp.net/en/latest/data/ef-mvc/intro.html" target="_blank">The tutorial can be found here.</a>
+                <a class="btn btn-success" href="https://gitbub.com/aspnet/docs/tree/master/aspnet/data/ef-mvc/intro/samples/cu-final" target="_blank">
+                    Download the final project here.
+                </a>
+            </div>
+            <div class="col-md-4">
+
+                <a class="btn btn-success" href="https://docs.asp.net/en/latest/data/ef-mvc/intro.html" target="_blank">The tutorial can be found here.</a>
+
+            </div>
+            <div class="col-md-4">
+
+                    <a class="btn btn-success" href="https://gitbub.com/aspnet/docs/tree/master/aspnet/data/ef-mvc/intro/samples/cu-final" target="_blank">
+                        Download the final project here.
+                    </a>
+            </div>*@
+    </div>

@@ -1,6 +1,7 @@
 # ContosoUniversity
 ContosoUniversity
-Contoso university, Microsoft mvc demo. Use as reference for: 
-Inheritance,
-viewmodels,
-Icollection/enum
+<ul>Contoso university, Microsoft mvc demo. Use as reference for:
+<li>Inheritance,</li>
+<li>viewmodels,</li>
+<li>Icollection/enum</li>
+</ul> 
